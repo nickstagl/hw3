@@ -6,9 +6,10 @@ class PlacesController < ApplicationController
   end
 
   def show
+    #find a place
     @id = params["id"]
     @place = Place.find_by({"id" => @id})
-    #find a place
+    
     #render places/show view with details about Place
     #
   end
