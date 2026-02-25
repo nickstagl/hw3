@@ -4,7 +4,7 @@ class EntryController < ApplicationController
     @place = Place.find_by({"id" =>@entry["place_id"]})
   end
   def new
-
+    @place_id = params["place_id"]
   end
   def create
     @entry = Entry.new

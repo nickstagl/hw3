@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources "places"
   # get("/places", {:controller => "places", :action => "index"})
   # get("/places/:id", {:controller => "places", :action => "show"})
-  # get("/places/new", {:controller => "entry", :action => "show"})
+  # get("/places/:id", {:controller => "entry", :action => "show"})
   # post("/places/", {controller => "places", :action => "create"})
-
+  # post("/places/:id", {controller => "entry", :action => "create"})
   resources "entry"
   # get("/entry", {:controller => "entry", :action => "index"})
 

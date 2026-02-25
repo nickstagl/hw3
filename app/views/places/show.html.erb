@@ -2,8 +2,20 @@
 
 <h2>Entries</h2>
 
+<% if @entries.any? %>
+  <% for entry in @entries %>
+    <div>
+      <h3><%= entry["title"] %></h3>
+      <p><%= entry["description"] %></p>
+      <p><em><%= entry["created_at"].to_date %></em></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>No entries yet.</p>
+<% end %>
+
 <p>
-  <a href="/entry/new">New Entry</a>
+  <a href="/entry/new?place_id=<%= @place["id"] %>">New Entry</a>
 </p>
 <p>
   <a href="/places">Back to Places List</a>
